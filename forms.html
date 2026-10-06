@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms, tabelle e contenitori</title>
+	</head>
+	<body>
+		<!-- Blocco header/nav -->
+		<header>
+			<h1>Tabelle, forms e contenitori</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Tabelle</a></li>
+					<li><a href="forms.html">Forms</a></li>
+				</ul>
+			</nav>
+		</header>
+		<hr />
+		<!-- Blocco main -->
+		<main>
+			<!-- Form semplice GET/POST -->
+			<form action="grazie.html" method="get">
+				<!-- Il metodo get non ha limiti di quantità di dati ma invia i dati in chiaro, il metodo post ha un limite a 256KB ma non invia i dati in chiaro -->
+				<label for="nome">Nome utente</label>
+				<input type="text" placeholder="nome" id="nome" name="nome" />
+				<label for="password">Passsword</label>
+				<input
+					type="password"
+					placeholder="password"
+					id="password"
+					name="password"
+				/>
+				<button type="submit">INVIA</button>
+			</form>
+			<hr />
+
+			<!-- Form completo -->
+			<form action="grazie.html" method="get">
+				<h2>Registrazione utente</h2>
+				<!-- Dati anagrafici -->
+				<fieldset>
+					<legend>Anagrafica</legend>
+					<label for="completeName">Nome completo</label>
+					<input
+						type="text"
+						placeholder="Inserisci il nome completo in formato Nome Cognome"
+						id="completeName"
+						title="Inserisci il nome completo in formato Nome Cognome"
+						name="completeName"
+					/>
+					<label for="birthDate">Data di nascita</label>
+					<input type="date" id="birthDate" name="birthDate" />
+					<br /><br />
+					<label for="address">Indirizzo</label>
+					<br />
+					<textarea
+						name="address"
+						id="address"
+						rows="3"
+						cols="80"
+					></textarea>
+					<br /><br />
+					<label for="userEmail">Email</label>
+					<input
+						type="email"
+						id="userEmail"
+						name="userEmail"
+						placeholder="Inserisci una email valida"
+						required
+					/>
+					<label for="cellPhone">Cellulare</label>
+					<input
+						type="number"
+						placeholder="Inserisci il numero di cellulare"
+						id="cellPhone"
+						name="cellPhone"
+					/>
+				</fieldset>
+				<fieldset>
+					<legend>Dati di registrazione</legend>
+					<label for="userName">Nome utente</label>
+					<input
+						type="text"
+						placeholder="Scegli un nome utente"
+						title="Scegli un nome utente"
+						id="userName"
+						name="userName"
+						required
+					/>
+					<label for="userPass">Password</label>
+					<input
+						type="password"
+						placeholder="Scegli ua password"
+						title="Scegli ua password"
+						id="userPass"
+						name="userPass"
+						required
+					/>
+					<p>&nbsp;</p>
+					<label for="numberDays">Giorni disponibili</label>
+					<input type="number" id="numberDays" name="numberDays" />
+					<br />
+					<label for="course">Scelta corso</label>
+					<select id="course" name="course">
+						<option value="" selected></option>
+						<option value="FE">Front End</option>
+						<option value="BE">Back End</option>
+						<option value="FS">Full Stack</option>
+					</select>
+					<p>Linguaggi conosciuti</p>
+					<input type="checkbox" id="HTML" name="HTML" />
+					<label for="HTML">HTML</label><br />
+					<input type="checkbox" id="CSS" name="CSS" />
+					<label for="CSS">CSS</label><br />
+					<input type="checkbox" id="JavaScript" name="JavaScript" />
+					<label for="JavaScript">JavaScript</label><br /><br />
+					<p>Fascia oraria</p>
+					<input
+						type="radio"
+						id="full"
+						value="full"
+						name="preferredTime"
+					/>
+					<label for="full">Full time</label><br />
+					<input
+						type="radio"
+						id="part"
+						value="part"
+						name="preferredTime"
+					/>
+					<label for="part">Part time</label><br />
+					<input
+						type="radio"
+						id="serale"
+						value="serale"
+						name="preferredTime"
+					/>
+					<label for="serale">Serale</label><br />
+				</fieldset>
+				<br />
+				<button type="submit" id="sendForm">INVIA</button>
+				<button type="reset">CANCELLA</button>
+			</form>
+		</main>
+	</body>
+</html>
