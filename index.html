@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms, tabelle e contenitori</title>
+		<style>
+			table {
+				border-collapse: collapse;
+			}
+
+			td,
+			th {
+				border: 2px solid black;
+			}
+			#bigger {
+				font-size: 4rem;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Blocco header/nav -->
+		<header>
+			<h1>Tabelle, forms e contenitori</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Tabelle</a></li>
+					<li><a href="forms.html">Forms</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Blocco main -->
+		<main>
+			<!-- Tabella semplice -->
+			<h2>Tabella semplice</h2>
+			<table>
+				<tbody>
+					<tr>
+						<td>Prima cella</td>
+						<td>cella 2</td>
+						<td>Ulteriore cella</td>
+					</tr>
+					<tr>
+						<td>Prima cella seconda riga</td>
+						<td id="bigger">cella 2 seconda riga</td>
+						<td>Ulteriore cella seconda riga</td>
+					</tr>
+				</tbody>
+			</table>
+			<hr />
+			<!-- Tabella completa -->
+			<h2>Tabella completa</h2>
+			<table>
+				<caption>
+					I miei progetti
+				</caption>
+				<thead>
+					<tr>
+						<th>Anno</th>
+						<th>Progetto</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2025</td>
+						<td>Portfolio</td>
+					</tr>
+					<tr>
+						<td>2026</td>
+						<td>Web app</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2">
+							Totale progetti: 2 progetti totali in pochi mesi di
+							lavoro
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</main>
+	</body>
+</html>
